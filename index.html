@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Music App</title>
+</head>
+
+<body>
+    <div class="player">
+        <!-- detail section -->
+        <div class="details">
+            <div class="now-playing">Playing 1 of 2</div>
+            <div class="track-art"></div>
+            <div class="track-name">Name</div>
+            <div class="track-artist">artist name</div>
+        </div>
+        <!-- icon section -->
+        <div class="buttons">
+            <div onclick="prevTrack()" class="prev-track">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div onclick="playPauseTrack()" class="play-track">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div onclick="nextTrack()" class="next-track">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+        <!-- seek slider -->
+        <div class="slider-container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo()">
+            <div class="total-duration">00:00</div>
+        </div>
+        <!-- volume section and controls  -->
+        <div class="slider-container">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100" value="99" class="volume-slider" onchange="setVolume()">
+            <i class="fa fa-volume-up"></i>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
